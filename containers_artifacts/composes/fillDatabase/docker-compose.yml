@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  dataload:
+    image: registrywqs1862.azurecr.io/dataload:1.0
+    environment:
+      SQLFQDN: SqlServer
+      SQLUSER: sa
+      SQLPASS: Passw0rd12345!
+      SQLDB: mydrivingDB
+            
+networks:
+    default:
+        external:
+            name: poi

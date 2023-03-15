@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  SqlServerContainer:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: SqlServer
+    hostname: SqlServer
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: Passw0rd12345!
+      MSSQL_PID: Express 
+    ports:
+      - "1733:1433"
+
+networks:
+    default:
+        external:
+            name: poi
