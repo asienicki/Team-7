@@ -35,6 +35,6 @@ curl -i -X GET 'http://localhost:8080/api/poi/trip/ea2f7ae0-3cef-49cb-b7d1-ce972
 
 Should return json with data.
 
-We have here 3 steps - create sql container, manual create database and filldatabase with data - we could wrap it up as single docker-compose - but for now - we can't do that because SQL_DatabaseName is not current supported.
+We have here 3 steps - create sql container, manual create database and filldatabase with data - we could wrap it up as single docker-compose - but for now - we can't do that because default SQL_DatabaseName in SQL Server docker container is not current supported.
 
 Only for fun - I created 2 separated docker-compose.yml in catalog: composes. For me it's more readable than command.
