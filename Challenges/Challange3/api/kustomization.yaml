@@ -10,7 +10,7 @@ resources:
 - user-java-service.yaml
 - userprofile-deploy.yaml
 - userprofile-service.yaml
-- azuresync.yaml
+- azure-sync.yaml
  
 namespace: api
  
