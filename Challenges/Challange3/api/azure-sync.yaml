@@ -37,12 +37,12 @@ spec:
           objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
         - |
           objectName: SQLPASSWORD
-          objectAlias:SQL_PASSWORD
+          objectAlias: SQL_PASSWORD
           objectType: secret              # object types: secret, key, or cert
           objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
         - |
           objectName: SQLUSER
-          objectAlias:SQL_USER
+          objectAlias: SQL_USER
           objectType: secret              # object types: secret, key, or cert
           objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
     tenantId: "5cec3e68-4ac3-4c23-b99e-4bde278e871c"        # The tenant ID of the key vault
