@@ -1,13 +1,13 @@
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: web-dev
+  name: web-dev-ro
   namespace: web
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: web-dev
+  name: web-dev-ro
 subjects:
 - kind: Group
   namespace: web
-  name: 5e009862-fd8d-45cd-ac8f-c81cf03fc0d5 #web-dev
+  name: 7e9c09c7-cc97-43f3-a3fa-92c84a27b4d0 #api-dev

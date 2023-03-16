@@ -1,0 +1,15 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: api-web-ro
+  namespace: web
+rules:
+- apiGroups: ["", "extensions", "apps"]
+  resources:
+  - jobs
+  - cronjobs
+  - pods
+  - svc
+  - events
+  - logs
+  verbs: ["get", "list", "watch"]
