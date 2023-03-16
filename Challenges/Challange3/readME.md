@@ -40,3 +40,7 @@ kubectl apply -k .
 kubectl -n openhack07 get po
 
 
+kubectl exec -it poi-deploy-f59d65d87-nhckf -n api -- sh
+
+
+
