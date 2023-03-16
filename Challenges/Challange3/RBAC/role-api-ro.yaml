@@ -6,10 +6,5 @@ metadata:
 rules:
 - apiGroups: ["", "extensions", "apps"]
   resources:
-  - jobs
-  - cronjobs
-  - pods
-  - svc
-  - events
-  - logs
+  - "*"
   verbs: ["get", "list", "watch"]
