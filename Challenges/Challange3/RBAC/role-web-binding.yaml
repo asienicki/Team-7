@@ -10,4 +10,4 @@ roleRef:
 subjects:
 - kind: Group
   namespace: web
-  name: groupObjectId
+  name: 5e009862-fd8d-45cd-ac8f-c81cf03fc0d5
