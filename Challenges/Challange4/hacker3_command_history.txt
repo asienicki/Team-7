@@ -1,0 +1,57 @@
+    1  ls
+    2  code .
+    3  code .
+    4  touch poi-deploy.yaml
+    5  touch kustomization.yaml
+    6  touch namespace.yaml
+    7  code namespace.yaml 
+    8  code node.yaml
+    9  kubectle kustomize
+   10  mkdir openHack07h3
+   11  mv kustomization.yaml openHack07h3/kustomization.yaml
+   12  mv namespace.yaml openHack07h3/namespace.yaml
+   13  mv node.yaml openHack07h3/node.yaml
+   14  mv poi-deploy.yaml openHack07h3/poi-deploy.yaml
+   15  cd openHack07h3/
+   16  ls
+   17  kubectl kustomize
+   18  kubectl apply
+   19  kubectl kustomize
+   20  ls
+   21  code kustomization.yaml 
+   22  code poi-deploy.yaml 
+   23  rm poi-deploy.yaml 
+   24  touch poi-deploy.yaml 
+   25  code poi-deploy.yaml 
+   26  kubectl kustomize
+   27  kubectl apply -k
+   28  kubectl apply -f
+   29  kubectl apply -f -
+   30  az login
+   31  az aks nodepool add -cluster-name challenge3 -g teamResources --max-pods=30 --name newpool --enable-cluster-autoscaler --min-count 3 --max-count 5
+   32  kubectl get namespace
+   33  kubectl -n api get po
+   34  kubectl version
+   35  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
+   36  kubectl -n api get po
+   37  az aks get-credentials --name challenge3 --resource-group teamResources -f ./challenge3 && kubelogin --kubeconfig ./challenge3 convert-kubeconfig -l azurecli
+   38  az aks get-credentials --name newChallenge3 --resource-group teamResources && kubelogin convert-kubeconfig -l azurecli
+   39  kubectl version
+   40  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
+   41  kubectl version
+   42  kubectl get ns
+   43  kubectl -n api
+   44  kubectl -n api get po
+   45  kubectl get ns
+   46  kubectl -n api get po
+   47  kubectl -n web get po
+   48  kubectl -n api get po
+   49  kubectl -n web get po
+   50  kubectl -n api edit deploy
+   51  kubectl -n web edit deploy
+   52  kubectl -n api edit deploy
+   53  kubectl version --output=yaml
+   54  kubectl -n api edit deploy
+   55  kubectl -n web edit deploy
+   56  history
+   57  history > hacker3_command_history.txt

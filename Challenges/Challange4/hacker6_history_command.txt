@@ -1,0 +1,401 @@
+    1  ls -a
+    2  kubectl get pods
+    3  ls
+    4  code .
+    5  [200~az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config~
+    6  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
+    7  mkdir
+    8  kubectl
+    9  cls
+   10  clear
+   11  mdkir openhack07
+   12  code openhac07
+   13  kubectl get pods
+   14  kubect get pods
+   15  kubectl get-info
+   16  kubectl help
+   17  mkdir openhack07
+   18  clear
+   19  kubectl [200~cluster-info~
+   20  kubectl cluster-info
+   21  code openhack07/
+   22  git
+   23  az aks get-credentials --name newChallenge3 --resource-group teamReasources -f ~/.kube/config
+   24  cd .
+   25  ls
+   26  cd openhack07/
+   27  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
+   28  ls
+   29  kubectl version
+   30  git clone https://github.com/asienicki/Team-7
+   31  ls
+   32  cd ..
+   33  ls
+   34  ls -a
+   35  mv kustomization.yaml openhack07/kustomization.yaml
+   36  cd Team-7/
+   37  ls
+   38  cd Team-7/
+   39  ls
+   40  ls
+   41  cd Challenges/
+   42  ls
+   43  cd Challange2/
+   44  ls
+   45  cd Challenges/
+   46  ls
+   47  cd Team-7/
+   48  ls
+   49  kubectl kustomize .
+   50  kubectl apply -k .
+   51  clear
+   52  kubectl -n openhack07 get pods
+   53  cd Challange
+   54  kubectl get pods
+   55  kubectl -n openhack07 get pods
+   56  ls
+   57  kubectl -n openhack07 get svc
+   58  kubectl get ns
+   59  code .
+   60  cd Challenges/Challange2
+   61  ls
+   62  kubectl config set-context –current –namespace=openhack07
+   63  ls
+   64  V
+   65  kubectl config set-context –current –namespace=openhack07
+   66  kubectl get po
+   67  kubectl get ns
+   68  kubectl config set-context --current --namespace=openhack07
+   69  kubectl get pods
+   70  kubectl delete ns openhack07
+   71  cd .
+   72  ls
+   73  cd Challange3
+   74  mc
+   75  cd .
+   76  mc
+   77  clear
+   78  cd .
+   79  cd ..
+   80  cd Challange3
+   81  apt install mc -y
+   82  cd ..
+   83  ls
+   84  git pull
+   85  ls
+   86  cd Challenges/
+   87  cd Challange3
+   88  ls
+   89  sudo apt install mc -y
+   90  apt
+   91  yum
+   92  code .
+   93  sudo yum install mc
+   94  ls
+   95  sudo su -
+   96  ls
+   97  ls  -a
+   98  ls
+   99  cd Team-7/
+  100  ls
+  101  git fetch
+  102  git pull
+  103  ls
+  104  cd ..
+  105  git pull
+  106  ls
+  107  cd Challenges/
+  108  cd Challange3
+  109  ls
+  110  kubeclt kustomize api
+  111  kubectl get pods
+  112  kubectl get ns
+  113  kubectl kustomize api
+  114  kubectl apply -k api
+  115  kubectl apply -k web
+  116  kubectl version
+  117  kubectl get ns
+  118  kubectl get pods
+  119  kubectl get po -A
+  120  kubectl get pods -a api
+  121  kubectl get pods
+  122  kubectl -n web
+  123  kubectl -n web getsvc
+  124  kubectl -n web get svc
+  125  kubectl get pods
+  126  clear
+  127  kubectl get pods
+  128  kubectl get pods -A
+  129  kubectl get pods -a
+  130  kubectl get ns
+  131  kubectl config set-context –current –namespace=api
+  132  kubectl get pods
+  133  kubectl config set-context –current –namespace=api
+  134  kubectl -n api -it poi-deploy-f59d65d87-nhckf -- sh
+  135  kubectl config set-context –current –namespace=api
+  136  kubectl -it poi-deploy-f59d65d87-nhckf -n api -- sh
+  137  kubectl config set-context –current –namespace=web
+  138  kubectl get ns
+  139  kubectl exec -it poi-deploy-f59d65d87-nhckf -n api -- sh
+  140  git pull
+  141  ls
+  142  ls RBAC/
+  143  kubectl apply -f RBAC/api
+  144  ls
+  145  cd RBAC/
+  146  ls
+  147  cd ..
+  148  kubectl apply -f RBAC
+  149  az ad group show
+  150  az ad group show --group
+  151  git pull
+  152  kubectl apply -f RBAC
+  153  kubect get roles
+  154  kubectl get roles
+  155  kubectl get role
+  156  kubectl api-resources
+  157  clear
+  158  kubectl get role
+  159  kubectl get role -A
+  160  kubectl -n web delete role dev-user-full-access
+  161  kubectl -n api delete role dev-user-full-access
+  162  kubectl get role -A
+  163  ls RBAC/
+  164  ls RBAC/ -l
+  165  kubectl get namespace
+  166  kubectl get ns
+  167  kubectl get pods -n web
+  168  kubectl get pods -n api
+  169  kubectl get role -A
+  170  kubectl delete -f RBAC
+  171  kubectl get role -A
+  172  git pull
+  173  ls
+  174  kubectl apply -f RBAC
+  175  git pull
+  176  kubectl apply -f RBAC
+  177  exit
+  178  kubectl get pods -n api
+  179  kubectl get pods -n web
+  180  kubectl get ns
+  181  kubectl get namespace
+  182  kubectl version
+  183  kubectl --short
+  184  kubectl version --short
+  185  kubectl version --output=yaml|json 
+  186  kubectl --output=yaml|json 
+  187  kubectl version --output=yaml | json 
+  188  kubectl version --output=yaml
+  189  kubectl version --o=yaml
+  190  kubectl version --output=yaml
+  191  kubectl create serviceaccount artur
+  192  kubectl create token
+  193  kubectl create token artur
+  194  cls
+  195  clear
+  196  git pull
+  197  kubectl apply -f RBAC
+  198  kubectl get ns
+  199  git pull
+  200  kubectl get ns
+  201  kubectl apply -f RBAC
+  202  kubectl get na
+  203  kubectl version
+  204  kubectl apply
+  205  git pull
+  206  kubectl apply
+  207  kubectl apply -f RBAC
+  208  git pull
+  209  clear
+  210  ls
+  211  az aks enable-addons --addons azure-keyvault-secrets-provider --name newChallenge3 --resource-group teamResources
+  212  az keyvault create -n Team7KeyVault -g teamResources -l northeurope
+  213  ls
+  214  cd api/
+  215  ls
+  216  az keyvault secret set --vault-name Team7KeyVault -n PoiEnvSecret --file poi.env
+  217  kubectl get pods -n kube-system -l
+  218  az keyvault secret set --vault-name Team7KeyVault -n poi-secrets --file poi.env
+  219  az keyvault secret
+  220  az keyvault secret get
+  221  az keyvault secret list
+  222  az keyvault secret list --vault-name Team7KeyVault
+  223  git pull
+  224  az keyvault secret list --vault-name Team7KeyVault
+  225  kubectl -n api get secrets
+  226  kubectl -n api delete secrets --all
+  227  kubectl -n api get secrets
+  228  kubectl apply -k .
+  229  kubectl -n api get secrets
+  230  git pull
+  231  kubectl apply -k .
+  232  git pull
+  233  kubectl apply -k .
+  234  git pull
+  235  kubectl apply -k .
+  236  git pull
+  237  kubectl apply -k .
+  238  kubectl get ns
+  239  kubectl get pods api
+  240  kubectl get pods -n api
+  241  kubectl -n api get secrets
+  242  helm version
+  243  NAMESPACE=ingress-basic
+  244  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+  245  helm repo update
+  246  helm install ingress-nginx ingress-nginx/ingress-nginx   --create-namespace   --namespace $NAMESPACE   --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-health-probe-request-path"=/healthz
+  247  helm
+  248  REGISTRY_NAME=registrywqs1862
+  249  SOURCE_REGISTRY=k8s.gcr.io
+  250  CONTROLLER_IMAGE=ingress-nginx/controller
+  251  CONTROLLER_TAG=v1.2.1
+  252  PATCH_IMAGE=ingress-nginx/kube-webhook-certgen
+  253  PATCH_TAG=v1.1.1
+  254  DEFAULTBACKEND_IMAGE=defaultbackend-amd64
+  255  DEFAULTBACKEND_TAG=1.5
+  256  git pull
+  257  ls
+  258  cd Team-7/
+  259  ls
+  260  git pull
+  261  cd Challenges/Challange3
+  262  ls
+  263  cd api
+  264  kubectl apply -k .
+  265  az acr import --name $REGISTRY_NAME --source $SOURCE_REGISTRY/$CONTROLLER_IMAGE:$CONTROLLER_TAG --image $CONTROLLER_IMAGE:$CONTROLLER_TAG
+  266  az acr import --name $REGISTRY_NAME --source $SOURCE_REGISTRY/$PATCH_IMAGE:$PATCH_TAG --image $PATCH_IMAGE:$PATCH_TAG
+  267  az acr import --name $REGISTRY_NAME --source $SOURCE_REGISTRY/$DEFAULTBACKEND_IMAGE:$DEFAULTBACKEND_TAG --image $DEFAULTBACKEND_IMAGE:$DEFAULTBACKEND_TAG
+  268  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+  269  ACR_URL=registrywqs1862.azurecr.io
+  270  helm install ingress-nginx ingress-nginx/ingress-nginx     --version 4.1.3     --namespace ingress-basic     --create-namespace     --set controller.replicaCount=2     --set controller.nodeSelector."kubernetes\.io/os"=linux     --set controller.image.registry=$ACR_URL     --set controller.image.image=$CONTROLLER_IMAGE     --set controller.image.tag=$CONTROLLER_TAG     --set controller.image.digest=""     --set controller.admissionWebhooks.patch.nodeSelector."kubernetes\.io/os"=linux     --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-health-probe-request-path"=/healthz     --set controller.admissionWebhooks.patch.image.registry=$ACR_URL     --set controller.admissionWebhooks.patch.image.image=$PATCH_IMAGE     --set controller.admissionWebhooks.patch.image.tag=$PATCH_TAG     --set controller.admissionWebhooks.patch.image.digest=""     --set defaultBackend.nodeSelector."kubernetes\.io/os"=linux     --set defaultBackend.image.registry=$ACR_URL     --set defaultBackend.image.image=$DEFAULTBACKEND_IMAGE     --set defaultBackend.image.tag=$DEFAULTBACKEND_TAG     --set defaultBackend.image.digest=""
+  271  kubectl get ns
+  272  git pull
+  273  kubectl -n ingress-basic get pods
+  274  kubectl -k .
+  275  kubectl apply -k .
+  276  git pull
+  277  kubectl apply -k .
+  278  git pull
+  279  kubectl apply -k .
+  280  ls
+  281  cd Team-7/'
+  282  ls
+  283  cd Team-7/ls
+  284  cd openhack07/
+  285  ls
+  286  kubectl get ns
+  287  git pull
+  288  ls
+  289  ls -s
+  290  kubectl apply -k .
+  291  [200~kubectl apply -f~
+  292  ls -a
+  293  cd ..
+  294  ls
+  295  kubectl apply -f example-ingress.yaml 
+  296  kubectl get pods
+  297  kubectls get ns
+  298  git pull
+  299  kubectl get ns
+  300  kubectl apply -k .
+  301  kubectl logs
+  302  kubectl logs [200~ingress-basic~
+  303  kubectl logs ingress-basic
+  304  kubectl -n web logs
+  305  kubectl -n web logs -l
+  306  kubectl -n web logs
+  307  kubectl get po
+  308  kubectl -n web get po
+  309  kubectl -n tripviewer-deploy-5f7774fbc4-2ppp8 logs
+  310  kubectl logs tripviewer-deploy-5f7774fbc4-2ppp8
+  311  kubectl get pods -n ingress-basic
+  312  kubectl -n web logs tripviewer-deploy-5f7774fbc4-2ppp8
+  313  ls
+  314  cd Team-7/
+  315  ls
+  316  cd Challenges/
+  317  kubectl -n api get po
+  318  cd ..
+  319  ls
+  320  kubectl get ingress
+  321  kubectl get ingress-basic
+  322  touch ingress-web.yaml
+  323  kubectl -n api describe poi-deploy-86d89f5c8f-nkjrq
+  324  kubectl -n api get po
+  325  kubectl get Ingress
+  326  vi ingress-web.yaml 
+  327  kubectl -n web get svc
+  328  kubectl -n api describe trips-deploy-76f585cb77-hmz7j
+  329  kubectl -n web apply -f ingress-web.yaml 
+  330  kubectl apply -k .
+  331  kubectl -n api get po
+  332  kubectl get services --namespace ingress-basic -o wide -w ingress-nginx-controller
+  333  kubectl delete deployment.apps/poi-deploy
+  334  ls
+  335  ls
+  336  kubectl delete -f user-java-deploy.yaml 
+  337  vi ingress-web.yaml 
+  338  kubectl version
+  339  kubectl -n api delete -f user-java-deploy.yaml 
+  340  kubectl -n web ingress-web.yaml 
+  341  kubectl -n web apply -f ingress-web.yaml 
+  342  kubectl apply -k .
+  343  kubectl get po
+  344  kubectl -n api get po
+  345  kubectl logs -n api user-java-deploy-849876b84b-ls4z8
+  346  kubectl describe -n api user-java-deploy-849876b84b-ls4z8
+  347  kubectl apply -f example-ingress2.yaml 
+  348  kubectl -n api get pods
+  349  kubectl -n api get svc
+  350  kubectl apply -f example-ingress3.yaml 
+  351  kubectl get ns
+  352  touch ingress-api.yaml
+  353  vi ingress-api.yaml 
+  354  kubectl -n api apply -f ingress-api.yaml 
+  355  kubectl -n api get svc
+  356  vi ingress-api.yaml 
+  357  kubectl -n api apply -f ingress-api.yaml 
+  358  kubectl get services --namespace ingress-basic -o wide -w ingress-nginx-controller
+  359  kubectl -n api apply -f example-ingress4.yaml 
+  360  ls
+  361  rm example-ingress.yaml 
+  362  rm example-ingress2.yaml 
+  363  rm example-ingress3.yaml 
+  364  rm example-ingress4.yaml 
+  365  ls
+  366  kubectl -n api apply -f example-ingress5.yaml 
+  367  ls
+  368  rm example-ingress5.yaml
+  369  kubectl -n api apply -f example-ingress5.yaml 
+  370  kubectl -n ingress-basic apply -f example-ingress5.yaml 
+  371  kubectl -n ingress-basic apply -f example-ingress6.yaml 
+  372  rm example-ingress6.yaml 
+  373  kubectl get ns
+  374  kubectl describe ingress ingress-basic
+  375  kubectl describe ingress ingress
+  376  kubectl describe ingress-basic
+  377  kubectl describe ingress ingress-
+  378  kubectl describe ingress [200~ingress-nginx-controller~
+  379  kubectl describe ingress ingress-nginx-controller
+  380  kubectl describe ingress example-ingress
+  381  kubectl describe ingress example-ingress6
+  382  kubectl describe ingress ingress-nginx-controller
+  383  kubectl get ingress
+  384  kubectl get ingress ingress-basic
+  385  kubectl apply -f example-ingress5.yaml
+  386  kubectl get ingress
+  387  kubectl get ns ingress-basic
+  388  [200~kubectl config set-context --current --namespace=~
+  389  kubectl config set-context --current --namespace=ingress-basic
+  390  kubectl get pods
+  391  kubectl apply -f example-ingress5.yaml
+  392  kubectl get ingress
+  393  kubectl apply -f example-ingress4.yaml
+  394  kubectl apply -f example-ingress5.yaml
+  395  kubectl apply -f example-ingress6.yaml
+  396  kubectl apply -f example-ingress5.yaml
+  397  kubectl get ingress
+  398  uname -a
+  399  kubectl apply -f example-ingress5.yaml
+  400  code .
+  401  history > history_for_print.txt

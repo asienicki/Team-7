@@ -1,0 +1,248 @@
+    1  code .
+    2  kubectl
+    3  helm
+    4  docker
+    5  az aks create -g teamResources -n damianAks --node-count 3
+    6  --enable-managed-identity 
+    7  --enable-addons monitoring --enable-msi-auth-for-monitoring  --generate-ssh-keys
+    8  az aks create -g teamResources -n damianAks --node-count 3 --enable-managed-identity --enable-addons monitoring --enable-msi-auth-for-monitoring  -generate-ssh-keys
+    9  ls -la
+   10  az aks create -g teamResources -n damianAks --node-count 3 --enable-managed-identity --enable-addons monitoring --enable-msi-auth-for-monitoring --generate-ssh-keys
+   11  git clone https://github.com/Microsoft-OpenHack/containers_artifacts
+   12  cls
+   13  clear
+   14  az account set --subscription e644923b-a6b9-4cf6-ab11-bd90c7900981
+   15  az aks get-credentials --name openhack07aks --resource-group teamResources -f ./openhack07aks
+   16  ls
+   17  cat openhack07aks 
+   18  kubectl --kubecongfig ./openhack07aks version
+   19  kubectl --kubeconfig ./openhack07aks version
+   20  code
+   21  code .
+   22  mkdir openhack07
+   23  cd openhack07
+   24  code .
+   25  az aks get-credentials --name openhack07aks --resource-group teamResources -f ~/.kube/config
+   26  kubectl version
+   27  touch namespace.yaml
+   28  ls 
+   29  ls
+   30  code test.yaml
+   31  ls
+   32  vi namespace.yaml 
+   33  code namespace.yaml 
+   34  rm test.yaml 
+   35  ls
+   36  touch deployment.yaml
+   37  ls
+   38  touch kustomize.yaml
+   39  kubectl kustomize 
+   40  mv kustomize.yaml kustomization.yaml
+   41  kubectl kustomize 
+   42  kubectl
+   43  kubectl --version
+   44  kubectl version
+   45  ls
+   46  mv deployment.yaml poi-deploy.yaml
+   47  ls
+   48  kubectl kustomize 
+   49  ls
+   50  rm kustomize.yaml
+   51  ls
+   52  kubectl kustomize 
+   53  kubectl apply -k
+   54  kubectl apply -k .
+   55  kubectl get ns
+   56  kubectl get po
+   57  kubectl -n openhack07 get po
+   58  kubectl -n openhack07 get event
+   59  docker
+   60  docker pull registrywqs1862.azurecr.io/poi:1
+   61  kubectl -n openhack07 get event
+   62  docker login registrywqs1862.azurecr.io
+   63  az aks update -g teamResources -n openhack07aks -attach-acr registrywqs1862.azurecr.io
+   64  az aks update -g teamResources -n openhack07aks --attach-acr registrywqs1862.azurecr.io
+   65  az aks update -g teamResources -n openhack07aks --attach-acr registrywqs1862
+   66  az aks get-credentials --name openhack07aks2 --resource-group teamResources -f ~/.kube/config
+   67  kubectl apply -k
+   68  kubectl apply -k .
+   69  kubectl -n openhack07 get po
+   70  touch poi-service.yaml
+   71  kubectl kustomize
+   72  kubectl apply -k .
+   73  kubectl -n openhack07 get service
+   74  ls
+   75  cd containers_artifacts/
+   76  ls
+   77  cd src/
+   78  ls
+   79  cd poi
+   80  cat README.md 
+   81  kubectl exec -it poi-deploy-799b77cd47-m564r -- bash
+   82  kubectl -n openhack07 exec -it poi-deploy-799b77cd47-m564r -- bash
+   83  touch poi.env
+   84  mv poi.env openhack07/
+   85  kubectl kuztomize
+   86  kubectl kustomize
+   87  cd openhack07
+   88  kubectl kustomize
+   89  kubectl apply -k .
+   90  kubectl -n openhack07 get po
+   91  kubectl -n openhack07 exec -it poi-deploy-7f8cb7df5b-626lc -- env
+   92  kubectl apply -k .
+   93  kubectl -n openhack07 get po
+   94  kubectl -n openhack07 exec -it poi-deploy-7898dd6dd6-lw9rv -- env
+   95  kubectl apply -k .
+   96  kubectl -n openhack07 get po
+   97  kubectl -n openhack07 exec -it poi-deploy-74d5f48b5f-8fs99 -- env
+   98  cd openhack07
+   99  kubectl -n openhack07 log -l app=poi
+  100  kubectl -n openhack07 logs -l app=poi
+  101  cd openhack07
+  102  kubectl apply -k .
+  103  kubectl -n openhack07 get po
+  104  kubectl -n openhack07 exec -it poi-deploy-6f8956b4c8-jnfgc -- env
+  105  cd openhack07
+  106  kubectl -n openhack07 exec -it poi-deploy-6f8956b4c8-jnfgc -- sh
+  107  kubectl apply -k .
+  108  kubectl -n openhack07 get po
+  109  kubectl -n openhack07 exec -it poi-deploy-6f8956b4c8-jnfgc -- env
+  110  kubectl logs -l app=poi
+  111  kubectl -n openhack07 logs -l app=poi
+  112  kubectl -n openhack07 logs poi-deploy-6f8956b4c8-jnfgc
+  113  kubectl -n openhack07 exec -it poi-deploy-6f8956b4c8-jnfgc -- env
+  114  kubectl -n openhack07 logs poi-deploy-6f8956b4c8-jnfgc
+  115  kubectl -n openhack07 exec -it poi-deploy-6f8956b4c8-jnfgc -- sh
+  116  kubectl kustomize
+  117  kubectl apply -k .
+  118  kubectl -n openhack07 get po
+  119  kubectl -n openhack07 exec -it deploy-65bf697575-zmr8w --env
+  120  kubectl -n openhack07 exec -it poi-deploy-65bf697575-zmr8w -- env
+  121  curl -i "http://poi.openhack07.svc.cluster.local/api/poi/healthcheck'
+  122  curl -i 'http://poi.openhack07.svc.cluster.local/api/poi/healthcheck'
+  123  kubectl -n openhack07 get po
+  124  kubectl -n openhack07 logs poi-deploy-65bf697575-zmr8w
+  125  kubectl -n openhack07 exec -it poi-deploy-65bf697575-zmr8w -- sh
+  126  kubectl kustomize
+  127  kubectl apply -k .
+  128  kubectl -n openhack07 get po
+  129  kubectl -n openhack07 exec -it poi-deploy-794b8995cd-qvr7q -- sh
+  130  kubectl kustomize
+  131  kubectl apply -k .
+  132  kubectl kustomize
+  133  kubectl apply -k .
+  134  kubectl -n openhack07 get po
+  135  cd openhack07
+  136  ls
+  137  kubectl -n openhack07 logs --all-containers
+  138  kubectl -n openhack07 logs poi-deploy-7db6cb5d76-79bdx
+  139  kubectl -n openhack07 exec -it poi-deploy-7db6cb5d76-79bdx -- sh
+  140  ls
+  141  cp poi-deploy.yaml trips-deploy.yaml 
+  142  cp poi-deploy.yaml tripviewer-deploy.yaml 
+  143  cp poi-deploy.yaml user-java-deploy.yaml 
+  144  cp poi-deploy.yaml userprofile-deploy.yaml 
+  145  kubectl kustomize
+  146  kubectl apply -k .
+  147  kubectl -n openhack07 get po
+  148  kubectl -n openhack07 exec -it poi-deploy-844d54c584-fzjsp -- sh
+  149  cp poi-service.yaml trips-service.yaml
+  150  kubectl kustomize
+  151  kubectl apply -k .
+  152  cp trips-service.yaml tripviewer-service.yaml 
+  153  kubectl kustomize
+  154  cp trips-service.yaml user-java-service.yaml 
+  155  kubectl kustomize
+  156  cp user-java-service.yaml userprofile-service.yaml 
+  157  kubectl kustomize
+  158  kubectl -n openhack07 get svc 
+  159  kubectl kustomize
+  160  kubectl apply -k .
+  161  kubectl -n openhack07 get svc 
+  162  kubectl -n openhack07 get no
+  163  kubectl -n openhack07 get no --wide
+  164  kubectl -n openhack07 get no -wide
+  165  kubectl -n openhack07 get no -o wide
+  166  kubectl kustomize
+  167  kubectl apply -k .
+  168  kubectl -n openhack07 get svc 
+  169  kubectl kustomize
+  170  kubectl apply -k .
+  171  kubectl -n openhack07 get svc 
+  172  kubectl -n openhack07 get deployment
+  173  kubectl -n openhack07 delete svc tripviewer
+  174  kubectl apply -k .
+  175  kubectl -n openhack07 get svc 
+  176  zip openhack07.zip openhack07
+  177  ls -la
+  178  rm openhack07.zip 
+  179  zip openhack07.zip openhack07/*
+  180  [200~az aks get-credentials --name challenge3 --resource-group teamResources -f ./challenge3 && kubelogin --kubeconfig ./challenge3 convert-kubeconfig -l azurecli~
+  181  az aks get-credentials --name challenge3 --resource-group teamResources -f ./challenge3 && kubelogin --kubeconfig ./challenge3 convert-kubeconfig -l azurecli
+  182  ls
+  183  ls -a
+  184  cd [200~./challenge3~
+  185  cd ./challenge3
+  186  cd [200~challenge3~
+  187  cd challenge3
+  188  ls
+  189  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ./newChallenge3 && kubelogin --kubeconfig ./newChallenge3 convert-kubeconfig -l azurecli
+  190  ls -la
+  191  ls
+  192  ls -a
+  193  ls -la
+  194  mc
+  195  cd ~
+  196  whoami
+  197  ls
+  198  cd openhack07
+  199  ls
+  200  kubectl get info
+  201  kubectl 
+  202  kubectl [200~cluster-info~
+  203  kubectl cluster-info
+  204  az aks get-credentials --name challenge3 --resource-group teamResources -f ./challenge3
+  205  ls -a
+  206  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ./kube/config
+  207  kubectl version
+  208  kubectl kustomize
+  209  kubectl apply -k .
+  210  kubectl -n openhack07 get po
+  211  kubectl -n openhack07 get no
+  212  kubectl get pods
+  213  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~./kube/config
+  214  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
+  215  [200~az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config~
+  216  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
+  217  kubectl get pods
+  218  kubectl get namaspace
+  219  kubectl get --help
+  220  kubectl get -A
+  221  kubectl -n openhack07 get no
+  222  kubectl get ns
+  223  kubectl get ns
+  224  ls
+  225  mc
+  226  kubectl apply -k .
+  227  sudo apt install mc
+  228  ls
+  229  kubelogin
+  230  az aks get-credentials --name newChallenge3 --resource-group teamResources
+  231  kubectl get ns
+  232  kubectl get -n api get pods
+  233  kubectl get -n web get pods
+  234  az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
+  235  kubectl get -n web get pods
+  236  kubectl -n api get pods
+  237  kubectl -n web get pods
+  238  kubectl get ns
+  239  kubectl -n default get all
+  240  kubectl -n default get events
+  241  kubectl -n web get pods
+  242  kubectl -n api get pods
+  243  kubectl -n web get pods
+  244  kubectl -n api get pods
+  245  kubectl -n web get pods
+  246  kubectl -n web edit deploy
+  247  history
+  248  history > hacker1_command_history.txt

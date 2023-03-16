@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-nginx-controller
+  namespace: ingress-basic
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /
+          backend:
+            service:
+              name: trips
+              port:
+                number: 80
+        - path: /api/poi
+          backend:
+            service:
+              name: poi
+              port:
+                number: 80
+        - path: /api/trips
+          backend:
+            service:
+              name: trips
+              port:
+                number: 80
+        - path: /api/user
+          backend:
+            service:
+              name: userprofile
+              port:
+                number: 80
+        - path: /api/user-java
+          backend:
+            service:
+              name: user-java
+              port:
+                number: 80
