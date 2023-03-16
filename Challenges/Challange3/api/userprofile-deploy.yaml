@@ -25,15 +25,13 @@ spec:
           - secretRef:
              name: poi-secrets          
       restartPolicy: Always
-    
-    volumes:
-      - name: poi-secret
-        csi:
-          driver: secrets-store.csi.k8s.io
-          readOnly: true
-          volumeAttributes:
-           secretProviderClass: "azure-sync"
-
+      volumes:
+        - name: poi-secret
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+            secretProviderClass: "azure-sync"
   strategy:
     type: RollingUpdate
     rollingUpdate:
