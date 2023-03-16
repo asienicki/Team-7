@@ -18,7 +18,18 @@ Sprawdzenie uprawnień:
 ```
 az aks get-credentials --name newChallenge3 --resource-group teamResources -f ./challenge3 && kubelogin --kubeconfig ./challenge3 convert-kubeconfig -l azurecli
 ```
-Sprawdzenie uprawnień dla użytkowników w grupie:
+
+Pobranie uprawnień dla naszego klastra:
 ```
-az aks get-credentials --name newChallenge3 --resource-group teamResources -f ./challenge3
+az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
 ```
+
+
+
+
+kubectl version
+
+
+kubectl -n openhack07 get po
+
+
