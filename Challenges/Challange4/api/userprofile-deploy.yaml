@@ -1,21 +1,21 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: user-java-deploy
+  name: userprofile-deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-java
+      app: userprofile
   template:
     metadata:
       labels:
-        app: user-java
+        app: userprofile
         tier: backend
     spec:
       containers:
-        - name: user-java
-          image: user-java-image
+        - name: userprofile
+          image: userprofile-image
           ports:
             - name: http
               containerPort: 80
@@ -23,8 +23,15 @@ spec:
           imagePullPolicy: Always
           envFrom:
           - secretRef:
-             name: poi-secrets         
+             name: poi-secrets          
       restartPolicy: Always
+      volumes:
+        - name: poi-secret
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: "azure-sync"
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -33,3 +40,5 @@ spec:
   minReadySeconds: 10
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
+
+

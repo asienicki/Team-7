@@ -10,11 +10,7 @@ resources:
 - user-java-service.yaml
 - userprofile-deploy.yaml
 - userprofile-service.yaml
-
-secretGenerator:
-- name: poi-secrets
-  envs:
-  - poi.env
+- azure-sync.yaml
  
 namespace: api
  

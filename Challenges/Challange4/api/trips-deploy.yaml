@@ -1,21 +1,21 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: user-java-deploy
+  name: trips-deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-java
+      app: trips
   template:
     metadata:
       labels:
-        app: user-java
+        app: trips
         tier: backend
     spec:
       containers:
-        - name: user-java
-          image: user-java-image
+        - name: trips
+          image: trips-image
           ports:
             - name: http
               containerPort: 80
@@ -23,7 +23,12 @@ spec:
           imagePullPolicy: Always
           envFrom:
           - secretRef:
-             name: poi-secrets         
+             name: poi-secrets
+          env:
+          - name: OPENAPI_DOCS_URI
+            value: "http://changeme"
+          - name:  DEBUG_LOGGING
+            value: "false"
       restartPolicy: Always
   strategy:
     type: RollingUpdate
@@ -33,3 +38,5 @@ spec:
   minReadySeconds: 10
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
+
+

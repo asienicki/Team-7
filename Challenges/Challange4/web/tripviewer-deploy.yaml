@@ -1,29 +1,33 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: user-java-deploy
+  name: tripviewer-deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-java
+      app: tripviewer
   template:
     metadata:
       labels:
-        app: user-java
-        tier: backend
+        app: tripviewer
+        tier: frontend
     spec:
       containers:
-        - name: user-java
-          image: user-java-image
+        - name: tripviewer
+          image: tripviewer-image
           ports:
             - name: http
               containerPort: 80
               protocol: TCP
           imagePullPolicy: Always
-          envFrom:
-          - secretRef:
-             name: poi-secrets         
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Production"         
+          - name: TRIPS_API_ENDPOINT
+            value: "http://trips.api.svc.cluster.local"
+          - name: USERPROFILE_API_ENDPOINT
+            value: "http://userprofile.api.svc.cluster.local"         
       restartPolicy: Always
   strategy:
     type: RollingUpdate
@@ -33,3 +37,5 @@ spec:
   minReadySeconds: 10
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
+
+
