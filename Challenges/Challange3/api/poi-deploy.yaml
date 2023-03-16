@@ -25,6 +25,9 @@ spec:
           - name: poi-secrets
             mountPath: "/secrets"
             readOnly: true     
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Production"             
           # env:
           # - name: SQLUSER
           #   valueFrom:
