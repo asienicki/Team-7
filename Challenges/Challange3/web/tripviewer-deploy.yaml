@@ -22,6 +22,8 @@ spec:
               protocol: TCP
           imagePullPolicy: Always
           env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Production"         
           - name: TRIPS_API_ENDPOINT
             value: "http://trips.api.svc.cluster.local"
           - name: USERPROFILE_API_ENDPOINT
