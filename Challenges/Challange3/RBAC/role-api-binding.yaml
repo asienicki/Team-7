@@ -10,4 +10,4 @@ roleRef:
 subjects:
 - kind: Group
   namespace: api
-  name: groupObjectId
+  name: 7e9c09c7-cc97-43f3-a3fa-92c84a27b4d0
