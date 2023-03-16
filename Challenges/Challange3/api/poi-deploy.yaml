@@ -25,12 +25,12 @@ spec:
           - name: poi-secrets
             mountPath: "/secrets"
             readOnly: true     
-          env:
-          - name: SQLUSER
-            valueFrom:
-              secretKeyRef:
-                name: SQLUSER
-                key: username  
+          # env:
+          # - name: SQLUSER
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: SQLUSER
+          #       key: username  
           # envFrom:
           # - secretRef:
           #     name: poi-secrets          
