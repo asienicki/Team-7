@@ -24,11 +24,18 @@ Pobranie uprawnień dla naszego klastra:
 az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/.kube/config
 ```
 
+### Historia poleceń
 
+```
+kubectl get ns
+```
 
-
+```
 kubectl version
+```
 
+
+kubectl apply -k .
 
 kubectl -n openhack07 get po
 
