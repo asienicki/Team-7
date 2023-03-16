@@ -5,11 +5,5 @@ metadata:
   namespace: api
 rules:
 - apiGroups: ["", "extensions", "apps"]
-  resources:
-  - jobs
-  - cronjobs
-  - pods
-  - svc
-  - events
-  - logs
+  resources: ["*"]
   verbs: ["*"]
