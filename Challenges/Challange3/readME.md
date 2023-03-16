@@ -84,3 +84,7 @@ Pobranie podów z namespace o nazwie web:
 kubectl get pods -n web
 ```
 
+Instalujemy KeyVault:
+```
+az aks enable-addons --addons azure-keyvault-secrets-provider --name newChallenge3 --resource-group teamResources
+```
