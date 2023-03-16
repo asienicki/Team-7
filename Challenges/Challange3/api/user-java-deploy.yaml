@@ -27,7 +27,7 @@ spec:
       restartPolicy: Always
       volumes:
         - name: poi-secret
-          csi:
+          csi:
             driver: secrets-store.csi.k8s.io
             readOnly: true
             volumeAttributes:

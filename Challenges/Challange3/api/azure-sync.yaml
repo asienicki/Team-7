@@ -1,12 +1,48 @@
+# apiVersion: secrets-store.csi.x-k8s.io/v1
+# kind: SecretProviderClass
+# metadata:
+#   name: azure-sync
+# spec:
+#   provider: azure                             
+#   secretObjects:                              # [OPTIONAL] SecretObjects defines the desired state of synced Kubernetes secret objects
+#   - data:
+#     - key: SQL_USER                          # data field to populate
+#       #objectName: foo1                        # name of the mounted content to sync; this could be the object name or the object alias
+#     secretName: SQLUSER                     # name of the Kubernetes secret object
+#     type: Opaque                              # type of Kubernetes secret object (for example, Opaque, kubernetes.io/tls)
+
 apiVersion: secrets-store.csi.x-k8s.io/v1
 kind: SecretProviderClass
 metadata:
-  name: azure-sync
+  name: azure-sync # needs to be unique per namespace
 spec:
-  provider: azure                             
-  secretObjects:                              # [OPTIONAL] SecretObjects defines the desired state of synced Kubernetes secret objects
-  - data:
-    - key: poi-secrets                           # data field to populate
-      #objectName: foo1                        # name of the mounted content to sync; this could be the object name or the object alias
-    secretName: poi-secrets                     # name of the Kubernetes secret object
-    type: Opaque                              # type of Kubernetes secret object (for example, Opaque, kubernetes.io/tls)
+  provider: azure
+  parameters:
+    usePodIdentity: "false"
+    useVMManagedIdentity: "false"          
+    #clientID: "5cec3e68-4ac3-4c23-b99e-4bde278e871c" # Setting this to use workload identity
+    keyvaultName: Team7KeyVault       # Set to the name of your key vault
+    cloudName: ""                         # [OPTIONAL for Azure] if not provided, the Azure environment defaults to AzurePublicCloud
+    objects:  |
+      array:
+        - |
+          objectName: SQLSERVER
+          objectAlias: SQL_SERVER
+          objectType: secret              # object types: secret, key, or cert
+          objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
+        - |
+          objectName: SQLDBNAME
+          objectAlias: SQL_DBNAME
+          objectType: secret              # object types: secret, key, or cert
+          objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
+        - |
+          objectName: SQLPASSWORD
+          objectAlias:SQL_PASSWORD
+          objectType: secret              # object types: secret, key, or cert
+          objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
+        - |
+          objectName: SQLUSER
+          objectAlias:SQL_USER
+          objectType: secret              # object types: secret, key, or cert
+          objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
+    tenantId: "5cec3e68-4ac3-4c23-b99e-4bde278e871c"        # The tenant ID of the key vault

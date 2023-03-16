@@ -88,3 +88,9 @@ Instalujemy KeyVault:
 ```
 az aks enable-addons --addons azure-keyvault-secrets-provider --name newChallenge3 --resource-group teamResources
 ```
+
+az keyvault create -n Team7KeyVault -g teamResources -l northeurope
+
+az keyvault secret set --vault-name Team7KeyVault -n SqlServer --value MyAKSExampleSecret
+
+az keyvault secret set --vault-name Team7KeyVault -n SqlServer --file poi.env

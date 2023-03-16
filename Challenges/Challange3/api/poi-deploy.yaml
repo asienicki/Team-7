@@ -20,14 +20,24 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-          imagePullPolicy: Always
-          envFrom:
-          - secretRef:
-              name: poi-secrets          
+          imagePullPolicy: Always   
+          volumeMounts:
+          - name: poi-secrets
+            mountPath: "/secrets"
+            readOnly: true     
+          env:
+          - name: SQL_USER
+            valueFrom:
+              secretKeyRef:
+                name: SQLUSER
+                key: username  
+          # envFrom:
+          # - secretRef:
+          #     name: poi-secrets          
       restartPolicy: Always
       volumes:
-        - name: poi-secret
-          csi:
+        - name: poi-secrets
+          csi:
             driver: secrets-store.csi.k8s.io
             readOnly: true
             volumeAttributes:
