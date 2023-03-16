@@ -1,0 +1,42 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: tripviewer-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tripviewer
+  template:
+    metadata:
+      labels:
+        app: tripviewer
+        tier: frontend
+    spec:
+      containers:
+        - name: tripviewer
+          image: tripviewer-image
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          imagePullPolicy: Always
+          envFrom:
+          - secretRef:
+             name: poi-secrets
+          env:
+          - name: TRIPS_API_ENDPOINT
+            value: "http://trips.openhack07.svc.cluster.local"
+          - name: USERPROFILE_API_ENDPOINT
+            value: "http://userprofile.openhack07.svc.cluster.local"         
+      restartPolicy: Always
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  minReadySeconds: 10
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
+
+
