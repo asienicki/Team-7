@@ -26,21 +26,61 @@ az aks get-credentials --name newChallenge3 --resource-group teamResources -f ~/
 
 ### Historia poleceń
 
+Pobranie istniejących namespaców:
 ```
 kubectl get ns
 ```
+Skrót dla:
+```
+kubectl get namespace
+```
 
+Pokaż informację o wersji:
 ```
 kubectl version
 ```
 
+Ładniejsze pokazywanie wersji:
+```
+kubectl version --output=yaml
+```
 
+Zaaplikuj zmiany z aktualnego folderu ".":
+```
 kubectl apply -k .
+```
 
+Wyświetl listę podów w namespace openhack07:
+```
 kubectl -n openhack07 get po
+```
 
-
+Wejście do pod'a:
+```
 kubectl exec -it poi-deploy-f59d65d87-nhckf -n api -- sh
-
-
+```
+Wylistowanie wszystkich ról:
+```
+kubectl get role -A
+```
+Usunięcie konkretnej roli:
+```
+kubectl -n api delete role dev-user-full-access
+```
+Usunięcie konfiguracji z folderu RBAC:
+```
+kubectl delete -f RBAC
+```
+Zaaplikowanie konfiguracji z folderu RBAC:
+```
+kubectl apply -f RBAC
+```
+Pobranie podów z namespace o nazwie api:
+```
+kubectl get pods -n api
+```
+Pobranie podów z namespace o nazwie web:
+```
+kubectl get pods -n web
+```
 
