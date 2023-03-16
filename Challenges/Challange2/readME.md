@@ -16,9 +16,9 @@ Wejście do środka do pod'a:
 
 Sprawdzenie uprawnień:
 ```
-az aks get-credentials --name challenge3 --resource-group teamResources -f ./challenge3 && kubelogin --kubeconfig ./challenge3 convert-kubeconfig -l azurecli
+az aks get-credentials --name newChallenge3 --resource-group teamResources -f ./challenge3 && kubelogin --kubeconfig ./challenge3 convert-kubeconfig -l azurecli
 ```
 Sprawdzenie uprawnień dla użytkowników w grupie:
 ```
-az aks get-credentials --name challenge3 --resource-group teamResources -f ./challenge3
+az aks get-credentials --name newChallenge3 --resource-group teamResources -f ./challenge3
 ```
